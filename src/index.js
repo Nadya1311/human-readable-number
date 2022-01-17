@@ -54,7 +54,7 @@ module.exports = function toReadable (number) {
           return `${c[n[0]]} ${a[n[1]]}`
         }
         case(n[1] == 0 && n[2] == 0):{
-          return `${a[n[0]]} hundred `
+          return `${a[n[0]]} hundred`
         }
         case(n[2] == 0 && n.length == 3 ):{
           return `${a[n[0]]} hundred ${c[n[1]]}`
