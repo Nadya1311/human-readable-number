@@ -42,28 +42,31 @@ module.exports = function toReadable (number) {
 
     switch(true){
         case(0 <= n && n <= 10):{
-            return a[n];
+          return a[n];
         }
         case(11 <= n && n <= 20):{
             return b[n[1]];
+          }
+        case(n[1] == 0 &&  n.length == 2):{
+          return c[n[0]]
         }
         case(21 <= n && n <= 99):{
-            return `${c[n[0]]} ${a[n[1]]}`
+          return `${c[n[0]]} ${a[n[1]]}`
         }
         case(n[1] == 0 && n[2] == 0):{
-            return `${a[n[0]]} hundred `
+          return `${a[n[0]]} hundred `
         }
         case(n[2] == 0 && n.length == 3 ):{
-            return `${a[n[0]]} hundred ${c[n[1]]}`
+          return `${a[n[0]]} hundred ${c[n[1]]}`
         }
         case(n[0] + 0 + 0 < n && n <= n[0] + 0 + 9):{
-            return `${a[n[0]]} hundred ${a[n[2]]}`
+          return `${a[n[0]]} hundred ${a[n[2]]}`
         }
         case(n[0] + 1 + 1 <= n && n < n[0] + 2 + 0):{
-            return `${a[n[0]]} hundred ${b[n[2]]}`
+          return `${a[n[0]]} hundred ${b[n[2]]}`
         }
         case(n[0] + 2 + 0 < n && n <= n[0] + 9 + 9):{
-            return `${a[n[0]]} hundred ${c[n[1]]} ${a[n[2]]}`
+          return `${a[n[0]]} hundred ${c[n[1]]} ${a[n[2]]}`
         }
     }
       
